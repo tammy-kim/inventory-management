@@ -11,6 +11,7 @@ const Item = (props) => {
       name: "name",
       description: "description",
       price: "price",
+      size: "size"
     });
   };
 
@@ -33,6 +34,7 @@ const Item = (props) => {
           name={props.name}
           description={props.description}
           price={props.price}
+          size={props.size}
           onConfirm={popupHandler}
         ></Modal>
       )}

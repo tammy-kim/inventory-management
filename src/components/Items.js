@@ -8,7 +8,8 @@ const Items = (props) => {
                 <Item name={item.name}
                 description={item.description}
                 price={item.price}
-                image={item.image}></Item>
+                image={item.image}
+                size={item.size}></Item>
             ))}
         </div>
     );
