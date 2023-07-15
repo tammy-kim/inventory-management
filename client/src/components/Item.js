@@ -8,7 +8,6 @@ const Item = (props) => {
 
   const detailHandler = (e) => {
     setDetails({
-      id: "id",
       name: "name",
       description: "description",
       price: "price",
@@ -21,7 +20,8 @@ const Item = (props) => {
   }
 
   const deleteHandler = () => {
-    props.onDelete(props.id);
+    // props.onDelete(props.id);
+    props.onDelete(props);
   }
 
   return (
@@ -37,7 +37,6 @@ const Item = (props) => {
       <button onClick={deleteHandler}>Delete</button>
       {details && (
         <Modal
-          id={props.id}
           name={props.name}
           description={props.description}
           price={props.price}

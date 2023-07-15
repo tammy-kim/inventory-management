@@ -10,17 +10,15 @@ const Management = ({ items, addItem, removeItem }) => {
     addItem(item);
   };
 
-  // const handleDeleteItem = (itemId) => {
-  //   removeItem(itemId);
-  // }
-
   const handleDeleteItem = async (itemId) => {
     try {
       const response = await fetch(`http://localhost:3001/items/${itemId}`, {
         method: "DELETE",
       });
       if (response.ok) {
-       removeItem(itemId);
+      //  removeItem(itemId);
+      const deletedItem = items.find((item) => item.id === itemId);
+      removeItem(deletedItem);
       } else {
         console.error("Error deleting item:", response.status);
       }

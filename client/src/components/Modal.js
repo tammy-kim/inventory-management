@@ -11,7 +11,6 @@ const Modal = (props) => {
         </header>
         <div className="content">
           <p>
-            ID: {props.id} <br />
             Size: {props.size} <br />
             Description: {props.description} <br></br> Price: ${props.price}
           </p>

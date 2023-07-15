@@ -73,7 +73,7 @@ const InventoryForm = (props) => {
       .then((data) => {
         for (const item of data) {
           props.saveItem({
-            id: item.id,
+            id: item._id,
             name: item.name,
             description: item.description,
             price: item.price,
