@@ -6,6 +6,9 @@ var cors = require("cors");
 var mongoose = require("mongoose");
 require("dotenv").config();
 
+// const port = process.env.PORT;
+const port = 3002;
+
 var indexRouter = require("./routes/index");
 var itemsRouter = require("./routes/items");
 
@@ -17,7 +20,13 @@ mongoose
       useUnifiedTopology: true,
     }
   )
-  .then(() => console.log("Connected to Inventory Management Database"))
+  .then(() => {
+    // const PORT = process.env.PORT || 0;
+    app.listen(port, () => {
+      console.log(`App listening on ${port}`);
+    });
+  })
+      // console.log("Connected to Inventory Management Database"));
   .catch((error) => console.error("MongoDB Connection Error:", error));
 
 var app = express();
