@@ -12,7 +12,7 @@ const FilteredItems = () => {
 
   const fetchItems = async () => {
     try {
-      const url = selectedSize ? `http://localhost:3001/items?size=${selectedSize}` : 'http://localhost:3001/items';
+      const url = selectedSize ? `https://tammy-inventory-management.onrender.com/items?size=${selectedSize}` : 'https://tammy-inventory-management.onrender.com/items';
       const response = await fetch(url);
       if (response.ok) {
         const data = await response.json();

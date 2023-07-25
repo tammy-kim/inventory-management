@@ -12,7 +12,7 @@ const Management = ({ items, addItem, removeItem }) => {
 
   const handleDeleteItem = async (itemId) => {
     try {
-      const response = await fetch(`http://localhost:3001/items/${itemId}`, {
+      const response = await fetch(`https://tammy-inventory-management.onrender.com/items/${itemId}`, {
         method: "DELETE",
       });
       if (response.ok) {
