@@ -44,7 +44,7 @@ const InventoryForm = (props) => {
     };
     props.saveItem(item);
 
-    fetch("http://localhost:3001/items", {
+    fetch("https://tammy-inventory-management.onrender.com/items", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -68,7 +68,7 @@ const InventoryForm = (props) => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3001/items")
+    fetch("https://tammy-inventory-management.onrender.com/items")
       .then((r) => r.json())
       .then((data) => {
         for (const item of data) {
